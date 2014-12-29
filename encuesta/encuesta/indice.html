@@ -1,0 +1,9 @@
+{% if lista_preguntas %}
+    <ul>
+    {% for question in lista_preguntas %}
+        <li><a href="/encuesta/{{ question.id }}/">{{ question.pregunta1 }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
